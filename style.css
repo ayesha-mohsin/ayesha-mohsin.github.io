@@ -322,10 +322,10 @@ html {
   color: #26F808;
   background-color: black;
   border: 1.5px solid #26F808;
-  padding: 0.1rem 0.5rem;
+  padding: 0.18rem 0.55rem;
   border-radius: 15px; /* Adjust for pill or square style */
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
   text-shadow: 0 0 2px #26F808;
