@@ -23,7 +23,7 @@ body {
 }
 
 #home, #about, #research, #projects, #contact {
-  scroll-margin-top: 100px; /* Adjust if your navbar height is different */
+  scroll-margin-top: 96px; /* Adjust if your navbar height is different */
 }
 
 /* ========================= */
@@ -104,7 +104,7 @@ body {
   pointer-events: none;
   font-family: 'Fira Code', monospace;
   text-align: center;
-  margin-top: 3rem;            /* <<< Add this line to push it down */
+  margin-top: 2rem;            /* <<< Add this line to push it down */
 }
 
 
@@ -131,7 +131,7 @@ body {
   text-shadow: 
     0 0 2px #26F808,                          /* <<< Reduced sharpness */
     0 0 5px #26F808;                          /* <<< Softer glow */
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
   text-align: center;
   transition: text-shadow 0.3s ease, opacity 0.3s ease;
 }
