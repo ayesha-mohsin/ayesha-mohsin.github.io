@@ -1,0 +1,226 @@
+<!-- ========================= -->
+<!-- AYESHA MOHSIN PORTFOLIO HTML -->
+<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayesha Mohsin Portfolio</title>
+
+  <!-- Google Fonts: Fira Code & Anonymous Pro -->
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- ========================= -->
+<!--        NAVBAR SECTION     -->
+<!-- ========================= -->
+<nav class="navbar">
+  <!-- Hamburger Menu for Mobile -->
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Full Navbar Links -->
+  <div class="nav-links" id="nav-links">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========================= -->
+<!--         LANDING PAGE       -->
+<!-- ========================= -->
+<section id="home" class="hero">
+  <canvas id="starfield"></canvas>
+
+  <div class="typewriter-wrapper">
+    <span class="typewriter-text">
+      <span class="text-content"></span><span class="cursor">|</span>
+    </span>
+  </div>
+
+  <div class="hero-subtitle">
+    <p class="hero-mainline">Machine Learning | Data Analytics | Insight-Driven Solutions</p>
+    <p class="hero-subline">From Exploration to Explanation -- One Dataset at a Time.</p>
+    <div class="arrows">↓ ↓ ↓</div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!--           ABOUT            -->
+<!-- ========================= -->
+<section id="about" class="about-section">
+  <div class="about-card">
+    <img src="assets/ayesha-photo.jpg" alt="Ayesha Mohsin photo" class="about-photo">
+    <div class="about-divider"></div> 
+      <div class="about-text">
+        <h2>About Me</h2>
+        <div class="about-scroll"> <!-- ADD THIS WRAPPER -->
+          <p>
+            I'm Ayesha Mohsin — I blend the rigor of data analysis with the creativity of machine learning to build predictive models, extract meaningful insights, and design systems that are technically sound, socially conscious, and humane.
+          </p>
+          <p>
+            As a machine learning research assistant, I built and evaluated models — including neural networks, SVMs, and Mask R-CNN — for defense-funded applications supported by a $5.5M ARL grant. I've worked across the data pipeline using Python, SQL, Tableau, and Power BI to turn messy data into meaningful outcomes.
+          </p>
+          <p>
+            I'm passionate about the ethical advancement of AI — driven by the belief that innovation should serve human well-being. I aim to build systems that prioritize empathy and human-centered outcomes over engagement metrics and profit margins. Whether coding or designing, I'm always exploring the intersection of art, logic, and human experience.
+          </p>
+
+      <!-- SKILL TAGS -->
+      <div class="skills-container">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Feature Engineering</span>
+        <span class="skill-tag">Exploratory Data Analysis</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">Predictive Modeling</span>
+        <span class="skill-tag">Model Evaluation</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Tableau</span>
+      </div>
+    </div> <!-- END SCROLLABLE WRAPPER -->
+  </div>
+</div>  
+</section>
+<!-- ========================= -->
+<!--     RESEARCH SECTION     -->
+<!-- ========================= -->
+<section id="research" class="research-section">
+  <div class="research-card">
+    <h2 class="section-heading">Research</h2>
+
+    <div class="research-content">
+      <div class="research-text">
+        <h3>Machine Learning Graduate Research Assistant</h3>
+        <p><strong>University of North Texas</strong> — May 2023 to Aug 2024</p>
+        <ul>
+          <li>Contributed to a <strong>$5.5M Army Research Lab-funded project</strong> focused on developing <strong>AI-enhanced protective materials</strong> for aerospace and defense.</li>
+          <li>Designed and trained machine learning models (<strong>Mask R-CNN, SVM, neural networks</strong>) to <strong>predict phase transformations</strong> in High-Entropy Alloys (HEAs).</li>
+          <li>Applied signal processing, feature engineering, and <strong>cross-validation workflows</strong> using Python, PyTorch, and TensorFlow for <strong>microstructural grain analysis</strong>.</li>
+          <li>Used Electron Backscatter Diffraction (EBSD) data to identify <strong>grain-level transitions</strong> under mechanical strain.</li>
+          <li>Presented findings in UNT’s <strong>3-Minute Thesis competition</strong>, using <strong>Marvel analogies</strong> to simplify complex machine learning concepts.</li>
+        </ul>
+      </div>
+
+      <div class="research-video">
+        <h4>Research Spotlight: 3-Minute Thesis</h4>
+        <iframe 
+          width="100%" 
+          height="315" 
+          src="https://www.youtube.com/embed/cJd4GpagSmM" 
+          title="Machine Learning for High-Entropy Alloys: Engineering Superhero Materials | 3MT Talk" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!--       PROJECTS SECTION    -->
+<!-- ========================= -->
+<section id="projects" class="projects-section">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card" data-project="1">
+      <img src="assets/g1.jpg" alt="LLM Prompt Bias Evaluator" class="project-image">
+      <div class="project-overlay"><h3>LLM Prompt Bias Evaluator</h3></div>
+    </div>
+
+    <div class="project-card" data-project="2">
+      <img src="assets/g2.jpg" alt="Job Bias Analyzer Dashboard" class="project-image">
+      <div class="project-overlay"><h3>Job Description Bias Analyzer</h3></div>
+    </div>
+
+    <div class="project-card" data-project="3">
+      <img src="assets/g3.jpg" alt="Exoplanet Detection" class="project-image">
+      <div class="project-overlay"><h3>Exoplanet Detection using Kepler Data</h3></div>
+    </div>
+
+    <div class="project-card" data-project="4">
+      <img src="assets/g4.jpg" alt="Climate Trends Forecasting" class="project-image">
+      <div class="project-overlay"><h3>Climate Trends Forecasting with Berkeley Earth</h3></div>
+    </div>
+
+    <div class="project-card" data-project="5">
+      <img src="assets/g5.jpg" alt="Healthcare Chatbot (PubMed)" class="project-image">
+      <div class="project-overlay"><h3>Symptom Checker Chatbot with PubMed</h3></div>
+    </div>
+
+    <div class="project-card" data-project="6">
+      <img src="assets/g6.jpg" alt="Smart Energy Recommender" class="project-image">
+      <div class="project-overlay"><h3>Smart Energy Recommender</h3></div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <div id="modal-skills" class="skills-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!--        CONTACT SECTION     -->
+<!-- ========================= -->
+<section id="contact" class="contact-section">
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p>
+      Have a project in mind, a problem to solve, or just want to chat about data and design? I'm always open to new opportunities and meaningful collaborations -- let's build something impactful together!
+    </p>
+    <div class="contact-links">
+      <a href="mailto:shaikayeshamohsin15@gmail.com" target="_blank">
+        <img src="assets/email-icon.svg" alt="Email Icon" class="icon"> Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/ayeshamohsin01" target="_blank">
+        <img src="assets/linkedin-icon.svg" alt="LinkedIn Icon" class="icon"> LinkedIn
+      </a>
+      <a href="https://github.com/ayesha-mohsin" target="_blank">
+        <img src="assets/github-icon.svg" alt="GitHub Icon" class="icon"> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!--          FOOTER            -->
+<!-- ========================= -->
+<div class="footer-divider"></div>
+<footer class="footer">
+  Designed & built by Ayesha Mohsin • © 2025 (｡•̀ᴗ-)✧
+</footer>
+
+<!-- ========================= -->
+<!--        SCRIPT FILE         -->
+<!-- ========================= -->
+<script src="script.js"></script>
+</body>
+</html>
+
+

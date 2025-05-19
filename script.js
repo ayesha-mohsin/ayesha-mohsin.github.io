@@ -1,0 +1,260 @@
+// =========================
+//        script.js
+// =========================
+
+// ===== TYPEWRITER EFFECT ===== //
+const targetText = "< AYESHA MOHSIN / >";
+const textEl = document.querySelector('.text-content');
+const cursorEl = document.querySelector('.cursor');
+
+function typeWriterLoop() {
+  let i = 0;
+  const typingSpeed = 150;
+  const deletingSpeed = 80;
+  const pauseAfterTyping = 2500;
+  const pauseBeforeTyping = 1200;
+
+  function typeChar() {
+    if (!textEl || !cursorEl) return;
+    textEl.textContent = targetText.slice(0, i);
+    cursorEl.style.opacity = '1';
+
+    if (i < targetText.length) {
+      i++;
+      setTimeout(typeChar, typingSpeed);
+    } else {
+      setTimeout(deleteChar, pauseAfterTyping);
+    }
+  }
+
+  function deleteChar() {
+    if (!textEl || !cursorEl) return;
+    textEl.textContent = targetText.slice(0, i);
+    cursorEl.style.opacity = '1';
+
+    if (i > 0) {
+      i--;
+      setTimeout(deleteChar, deletingSpeed);
+    } else {
+      setTimeout(typeChar, pauseBeforeTyping);
+    }
+  }
+
+  typeChar();
+}
+
+document.addEventListener("DOMContentLoaded", typeWriterLoop);
+
+// =========================
+//    SMOOTH SCROLL
+// =========================
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Close mobile nav
+    const navList = document.querySelector('.nav-links ul');
+    const menuToggle = document.getElementById('menu-toggle');
+    navList?.classList.remove('show');
+    document.body.classList.remove('no-scroll');
+    menuToggle?.classList.remove('open');
+  });
+});
+
+// =========================
+//    PROJECT MODAL
+// =========================
+const modal = document.getElementById('project-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalSkills = document.getElementById('modal-skills');
+const closeButton = document.querySelector('.close-button');
+
+const projectDetails = {
+  1: {
+    title: "LLM Prompt Bias Evaluator (Responsible AI)",
+    description: "Designed a bias-auditing tool to evaluate how LLMs respond to sensitive hiring and identity-based prompts. Used a RAG pipeline with LangChain, OpenAI, and FAISS to simulate realistic recruiting interactions and flag biased completions. Outputs were scored for fairness and visualized using heatmaps and demographic comparisons.",
+    skills: ["LLMs", "Prompt Engineering", "LangChain", "RAG", "FAISS", "OpenAI API", "Transformers", "Python", "AI Fairness"]
+  },
+  2: {
+    title: "Job Description Bias Analyzer Dashboard (Responsible AI / DEI Analytics)",
+    description: "Built a dashboard to analyze exclusionary language in 1,000+ scraped job listings across industries. Used NLP to flag gender-coded terms, inflated requirements, and tone bias. Designed a Power BI dashboard with filters for industry, role level, and DEI KPIs to support inclusive hiring audits.",
+    skills: ["Web Scraping", "Text Mining", "SQL", "Tableau / Power BI", "KPI Reporting", "Python", "DEI Analytics"]
+  },
+  3: {
+    title: "Exoplanet Detection using Kepler Data",
+    description: "Trained a deep learning model on NASA’s Kepler dataset to identify potential exoplanets from light curve features. Engineered astrophysical signals like flux variation and orbital periodicity, and used SHAP to interpret model predictions.",
+    skills: ["Machine Learning", "Deep Learning", "Feature Engineering", "SHAP", "Model Evaluation", "Python", "TensorFlow"]
+  },
+  4: {
+    title: "Climate Trends Forecasting with Berkeley Earth",
+    description: "Forecasted global temperature anomalies using official Berkeley Earth data. Applied ARIMA and Prophet to decades of climate records, then visualized trend projections and regional risk zones via an interactive Tableau dashboard.",
+    skills: ["Time Series Forecasting", "Statistical Modeling", "Data Visualization", "Tableau", "Python", "ETL Simulation"]
+  },
+  5: {
+    title: "Symptom Checker Chatbot with PubMed (Healthcare NLP)",
+    description: "Created a chatbot that retrieves evidence-based medical answers using real-time PubMed abstracts. Built a RAG pipeline with HuggingFace embeddings and LangChain to match symptom queries with relevant literature and return safe, clear LLM-generated responses.",
+    skills: ["NLP", "RAG", "LangChain", "Transformers", "OpenAI API", "PubMed API", "Python", "Model Evaluation"]
+  },
+  6: {
+    title: "Smart Energy Recommender (Sustainability)",
+    description: "Built a recommender system that suggests energy-saving actions based on personal usage logs and live weather conditions. Integrated OpenWeatherMap API into ML pipelines to generate personalized insights and visualize them through optional dashboards.",
+    skills: ["ML Pipelines", "Recommender Systems", "API Integration", "Feature Engineering", "Python", "Cloud Readiness"]
+  }
+};
+
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const projectId = card.getAttribute('data-project');
+    const project = projectDetails[projectId];
+
+    if (project && modalTitle && modalDescription && modalSkills && modal) {
+      modalTitle.textContent = project.title;
+      modalDescription.textContent = project.description;
+      modalSkills.innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
+      modal.style.display = 'block';
+    }
+  });
+});
+
+closeButton?.addEventListener('click', () => {
+  if (modal) modal.style.display = 'none';
+});
+
+window.addEventListener('click', event => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// =========================
+//     STARFIELD PARTICLES
+// =========================
+const canvas = document.getElementById('starfield');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  const starCount = 200;
+  let stars = [];
+
+  function initStars() {
+    stars = [];
+    for (let i = 0; i < starCount; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.2 + 0.8,
+        speed: Math.random() * 0.4 + 0.1,
+        opacity: Math.random() * 0.5 + 0.5
+      });
+    }
+  }
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    stars.forEach(star => {
+      const coreSize = star.radius;
+      const glowSize = coreSize * 5;
+
+      const gradient = ctx.createRadialGradient(
+        star.x, star.y, 0,
+        star.x, star.y, glowSize
+      );
+
+      gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      gradient.addColorStop(0.3, 'rgba(0, 255, 255, 0.8)');
+      gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
+
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, coreSize, 0, Math.PI * 2);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      star.y += star.speed;
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    });
+
+    requestAnimationFrame(drawStars);
+  }
+
+  initStars();
+  drawStars();
+}
+
+// =========================
+//   CARD SLIDE-IN LOGIC
+// =========================
+function slideInOnView(selector, className = 'animate') {
+  const element = document.querySelector(selector);
+  if (!element) return;
+
+  const handleScroll = () => {
+    const rect = element.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+    element.classList.toggle(className, isInView);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+}
+
+slideInOnView('.about-card');
+slideInOnView('.research-card');
+slideInOnView('.contact-card');
+
+// =========================
+//   PROJECT CARD SLIDE-IN
+// =========================
+const projectCards = document.querySelectorAll('.project-card');
+const cardObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, index * 150);
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+projectCards.forEach(card => cardObserver.observe(card));
+
+// =========================
+//   HAMBURGER MENU TOGGLE
+// =========================
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+const navList = navLinks?.querySelector('ul');
+
+menuToggle?.addEventListener('click', () => {
+  const isMenuOpen = navList?.classList.contains('show');
+  navList?.classList.toggle('show');
+  document.body.classList.toggle('no-scroll');
+  menuToggle.classList.toggle('open');
+
+  if (!isMenuOpen) {
+    window.scrollTo({ top: 0 });
+  }
+});
