@@ -326,7 +326,7 @@ html {
   padding: 0.15rem 0.55rem;
   border-radius: 18px; /* Adjust for pill or square style */
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
   text-shadow: 0 0 2px #26F808;
