@@ -64,7 +64,7 @@ body {
 #research,
 #projects,
 #contact {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 110px;
 }
 
 
@@ -113,7 +113,6 @@ body {
 }
 
 
-
 .cursor {
   color: #26F808; /* Chartreuse */
   animation: blink-caret 0.75s step-end infinite;
@@ -136,7 +135,7 @@ body {
   text-shadow: 
     0 0 2px #26F808,                          /* <<< Reduced sharpness */
     0 0 5px #26F808;                          /* <<< Softer glow */
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   text-align: center;
   transition: text-shadow 0.3s ease, opacity 0.3s ease;
 }
@@ -176,7 +175,7 @@ body {
 .hero-subtitle {
   position: relative;
   z-index: 2;
-  margin-top: 0rem;
+  margin-top: -0.5rem;
   text-align: center;
   width: 100%;
   display: flex;
@@ -190,7 +189,7 @@ body {
   color: #26F808;                           /* Chartreuse */
   animation: glow 1.5s ease-in-out infinite alternate, bounce 2s infinite;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   cursor: default;                         /* No hover effect */
 }
 
@@ -219,7 +218,7 @@ body {
 
 .about-card {
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 2rem 0.2rem;
+  padding: 1.5rem 0.2rem;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -289,7 +288,7 @@ body {
 .about-text h2 {
   color: #7FFF00;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-text p {
