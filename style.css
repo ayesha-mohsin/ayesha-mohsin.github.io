@@ -17,6 +17,16 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-padding-top: 100px; /* adjust to match your navbar height */
+}
+
+.about-section,
+.research-section {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
 /* ===== FONTS ===== */
 .navbar, .about-text p, .about-text h2 {
   font-family: 'Anonymous Pro', monospace;
@@ -312,10 +322,10 @@ body {
   color: #26F808;
   background-color: black;
   border: 1.5px solid #26F808;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px; /* Adjust for pill or square style */
+  padding: 0.18rem 0.5rem;
+  border-radius: 10px; /* Adjust for pill or square style */
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
   text-shadow: 0 0 2px #26F808;
