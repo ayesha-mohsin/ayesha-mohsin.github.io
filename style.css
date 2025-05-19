@@ -322,8 +322,8 @@ html {
   color: #26F808;
   background-color: black;
   border: 1.5px solid #26F808;
-  padding: 0.18rem 0.5rem;
-  border-radius: 10px; /* Adjust for pill or square style */
+  padding: 0.1rem 0.5rem;
+  border-radius: 12px; /* Adjust for pill or square style */
   text-align: center;
   font-size: 0.65rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
