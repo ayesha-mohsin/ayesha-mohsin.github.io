@@ -22,6 +22,10 @@ body {
   font-family: 'Anonymous Pro', monospace;
 }
 
+#home, #about, #research, #projects, #contact {
+  scroll-margin-top: 100px; /* Adjust if your navbar height is different */
+}
+
 /* ========================= */
 /*        NAVBAR SECTION     */
 /* ========================= */
