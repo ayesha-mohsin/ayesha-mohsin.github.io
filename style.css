@@ -53,15 +53,16 @@ html {
   text-decoration: none;
   color: #26F808;
   border: 1px solid #26F808;
-  padding: 0.25rem 0.8rem;     /* Tighter vertical, balanced horizontal */
-  font-size: 0.85rem;          /* Small but readable */
+  padding: 0.2rem 1rem;     /* ↓ Tighter top/bottom padding */
+  font-size: 0.8rem;        /* ↓ Smaller font */
   border-radius: 50px;
   background-color: black;
   transition: all 0.3s ease;
-  width: auto;                 /* Optional: fits text automatically */
+  width: 120px;
   text-align: center;
   display: inline-block;
 }
+
 
 .navbar a:hover {
   background-color: #26F808;
