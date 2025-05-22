@@ -42,21 +42,24 @@ function typeWriterLoop() {
 
   typeChar();
 }
-
 document.addEventListener("DOMContentLoaded", typeWriterLoop);
 
 // =========================
-//    SMOOTH SCROLL
+//      SMOOTH SCROLL
 // =========================
 document.querySelectorAll('.navbar a').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    const offset = 100; // Adjust based on your navbar height
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    // Close mobile nav
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    });
+
+    // Close mobile nav if open
     const navList = document.querySelector('.nav-links ul');
     const menuToggle = document.getElementById('menu-toggle');
     navList?.classList.remove('show');
@@ -66,85 +69,72 @@ document.querySelectorAll('.navbar a').forEach(link => {
 });
 
 // =========================
-//    PROJECT MODAL
+//        MODAL LOGIC
 // =========================
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalSkills = document.getElementById('modal-skills');
-
-// Modal Close Button Event
 const closeButton = document.querySelector('.close-button');
-if (closeButton) {
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-}
 
-window.addEventListener('click', event => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-window.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    modal.style.display = 'none';
-  }
-});
-
-// Project Data
 const projectDetails = {
   1: {
     title: "LLM Prompt Bias Evaluator (Responsible AI)",
-    description: "Designed a bias-auditing tool to evaluate how LLMs respond to sensitive hiring and identity-based prompts. Used a RAG pipeline with LangChain, OpenAI, and FAISS to simulate realistic recruiting interactions and flag biased completions. Outputs were scored for fairness and visualized using heatmaps and demographic comparisons.",
+    description: "Designed a bias-auditing tool...",
     skills: ["LLMs", "Prompt Engineering", "LangChain", "RAG", "FAISS", "OpenAI API", "Transformers", "Python", "AI Fairness"]
   },
   2: {
-    title: "Job Description Bias Analyzer Dashboard (Responsible AI / DEI Analytics)",
-    description: "Built a dashboard to analyze exclusionary language in 1,000+ scraped job listings across industries. Used NLP to flag gender-coded terms, inflated requirements, and tone bias. Designed a Power BI dashboard with filters for industry, role level, and DEI KPIs to support inclusive hiring audits.",
-    skills: ["Web Scraping", "Text Mining", "SQL", "Tableau / Power BI", "KPI Reporting", "Python", "DEI Analytics"]
+    title: "Job Description Bias Analyzer Dashboard",
+    description: "Built a dashboard to analyze exclusionary language...",
+    skills: ["Web Scraping", "Text Mining", "SQL", "Power BI", "Python", "DEI Analytics"]
   },
   3: {
     title: "Exoplanet Detection using Kepler Data",
-    description: "Trained a deep learning model on NASA’s Kepler dataset to identify potential exoplanets from light curve features. Engineered astrophysical signals like flux variation and orbital periodicity, and used SHAP to interpret model predictions.",
-    skills: ["Machine Learning", "Deep Learning", "Feature Engineering", "SHAP", "Model Evaluation", "Python", "TensorFlow"]
+    description: "Trained a deep learning model on NASA’s Kepler dataset...",
+    skills: ["Machine Learning", "TensorFlow", "Feature Engineering"]
   },
   4: {
     title: "Climate Trends Forecasting with Berkeley Earth",
-    description: "Forecasted global temperature anomalies using official Berkeley Earth data. Applied ARIMA and Prophet to decades of climate records, then visualized trend projections and regional risk zones via an interactive Tableau dashboard.",
-    skills: ["Time Series Forecasting", "Statistical Modeling", "Data Visualization", "Tableau", "Python", "ETL Simulation"]
+    description: "Forecasted global temperature anomalies...",
+    skills: ["Time Series", "ARIMA", "Prophet", "Tableau", "Python"]
   },
   5: {
-    title: "Symptom Checker Chatbot with PubMed (Healthcare NLP)",
-    description: "Created a chatbot that retrieves evidence-based medical answers using real-time PubMed abstracts. Built a RAG pipeline with HuggingFace embeddings and LangChain to match symptom queries with relevant literature and return safe, clear LLM-generated responses.",
-    skills: ["NLP", "RAG", "LangChain", "Transformers", "OpenAI API", "PubMed API", "Python", "Model Evaluation"]
+    title: "Symptom Checker Chatbot with PubMed",
+    description: "Created a chatbot that retrieves evidence-based answers...",
+    skills: ["NLP", "RAG", "Transformers", "OpenAI API"]
   },
   6: {
-    title: "Smart Energy Recommender (Sustainability)",
-    description: "Built a recommender system that suggests energy-saving actions based on personal usage logs and live weather conditions. Integrated OpenWeatherMap API into ML pipelines to generate personalized insights and visualize them through optional dashboards.",
-    skills: ["ML Pipelines", "Recommender Systems", "API Integration", "Feature Engineering", "Python", "Cloud Readiness"]
+    title: "Smart Energy Recommender",
+    description: "Built a recommender system for energy-saving actions...",
+    skills: ["ML Pipelines", "Weather API", "Python"]
   }
 };
 
-// Show modal with data
-const cards = document.querySelectorAll('.project-card');
-cards.forEach(card => {
+// Show modal when project clicked
+document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const id = card.getAttribute('data-project');
-    const data = projectDetails[id];
-
-    if (data) {
-      modalTitle.textContent = data.title;
-      modalDescription.textContent = data.description;
-      modalSkills.innerHTML = data.skills.map(skill => `<span>${skill}</span>`).join('');
+    const project = projectDetails[id];
+    if (project) {
+      modalTitle.textContent = project.title;
+      modalDescription.textContent = project.description;
+      modalSkills.innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
       modal.style.display = 'block';
     }
   });
 });
 
+// Close modal events
+closeButton?.addEventListener('click', () => modal.style.display = 'none');
+window.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.style.display === 'block') modal.style.display = 'none';
+});
+
 // =========================
-//     STARFIELD PARTICLES
+//     STARFIELD CANVAS
 // =========================
 const canvas = document.getElementById('starfield');
 if (canvas) {
@@ -169,16 +159,21 @@ if (canvas) {
   function drawStars() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     stars.forEach(star => {
-      const gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.radius * 5);
-      gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-      gradient.addColorStop(0.3, 'rgba(0, 255, 255, 0.8)');
-      gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
+      const glow = star.radius * 5;
+      const gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, glow);
+      gradient.addColorStop(0, 'rgba(255,255,255,1)');
+      gradient.addColorStop(0.3, 'rgba(0,255,255,0.8)');
+      gradient.addColorStop(1, 'rgba(0,255,255,0)');
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
+
       star.y += star.speed;
-      if (star.y > canvas.height) star.y = 0;
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
     });
     requestAnimationFrame(drawStars);
   }
@@ -190,13 +185,12 @@ if (canvas) {
 }
 
 // =========================
-//   SLIDE-IN ANIMATIONS
+//   SLIDE-IN SECTIONS
 // =========================
 function slideInOnView(selector) {
   const el = document.querySelector(selector);
   if (!el) return;
-
-  function handleScroll() {
+  function onScroll() {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       el.classList.add('animate');
@@ -204,21 +198,21 @@ function slideInOnView(selector) {
       el.classList.remove('animate');
     }
   }
-
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('load', handleScroll);
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('load', onScroll);
 }
-
 slideInOnView('.about-card');
 slideInOnView('.research-card');
 slideInOnView('.contact-card');
 
-// Animate project cards
+// =========================
+//     PROJECT CARD ENTRY
+// =========================
 const projectCards = document.querySelectorAll('.project-card');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
+  entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('animate'), index * 150);
+      setTimeout(() => entry.target.classList.add('animate'), i * 150);
     } else {
       entry.target.classList.remove('animate');
     }
@@ -228,20 +222,20 @@ const observer = new IntersectionObserver((entries) => {
 projectCards.forEach(card => observer.observe(card));
 
 // =========================
-//   HAMBURGER MENU TOGGLE
+//     HAMBURGER MENU
 // =========================
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 const navList = navLinks?.querySelector('ul');
 
 menuToggle?.addEventListener('click', () => {
-  const isOpen = navList?.classList.contains('show');
+  const open = navList?.classList.contains('show');
   navList?.classList.toggle('show');
   document.body.classList.toggle('no-scroll');
   menuToggle.classList.toggle('open');
-
-  if (!isOpen) {
+  if (!open) {
     window.scrollTo({ top: 0 });
   }
 });
+
 
