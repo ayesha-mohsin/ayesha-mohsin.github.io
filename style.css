@@ -606,11 +606,11 @@ html {
   font-weight: bold;
   color: #26F808;
   text-shadow:
-    0 0 8px #26F808,
-    0 0 10px #26F808,
-    0 0 12px #26F808;
+    0 0 2px #26F808,
+    0 0 5px #26F808;
   margin-bottom: 1rem;
   font-family: 'Anonymous Pro', monospace;
+  opacity: 0.85; /* Optional: slight dimming */
 }
 
 .modal-content {
