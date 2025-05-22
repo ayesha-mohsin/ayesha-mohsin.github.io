@@ -674,7 +674,7 @@ html {
 
 .contact-section {
   min-height: 100vh;
-  padding: 10vh 10vw;
+  padding: 6vh 10vw;
   text-align: center;
   background: url('assets/g3.jpg') center center / cover no-repeat;
   display: flex;
@@ -708,9 +708,9 @@ html {
 
 .contact-card h2 {
   font-family: 'Anonymous Pro', monospace;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #26F808;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-card p {
@@ -719,7 +719,7 @@ html {
   color: #26F808;
   line-height: 1.6;
   text-align: center;
-  margin: 1.5rem auto 2rem;
+  margin: 1rem auto 1.5rem;
   max-width: 600px;
   padding: 0 1rem;
 }
