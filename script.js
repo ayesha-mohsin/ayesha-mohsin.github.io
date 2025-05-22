@@ -71,12 +71,18 @@ document.querySelectorAll('.navbar a').forEach(link => {
 // =========================
 //        MODAL LOGIC
 // =========================
+// =========================
+//        PROJECT MODAL
+// =========================
+
+// Get all relevant elements
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalSkills = document.getElementById('modal-skills');
 const closeButton = document.querySelector('.close-button');
 
+// Project content
 const projectDetails = {
   1: {
     title: "LLM Prompt Bias Evaluator (Responsible AI)",
@@ -110,28 +116,45 @@ const projectDetails = {
   }
 };
 
-// Show modal when project clicked
+// Attach click events to cards
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const id = card.getAttribute('data-project');
-    const project = projectDetails[id];
-    if (project) {
-      modalTitle.textContent = project.title;
-      modalDescription.textContent = project.description;
-      modalSkills.innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
-      modal.style.display = 'block';
-    }
+    const data = projectDetails[id];
+    if (!data) return;
+
+    modalTitle.textContent = data.title;
+    modalDescription.textContent = data.description;
+    modalSkills.innerHTML = data.skills.map(skill => `<span>${skill}</span>`).join('');
+    modal.style.display = 'block';
+    document.body.classList.add('no-scroll'); // optional: prevent background scroll
   });
 });
 
-// Close modal events
-closeButton?.addEventListener('click', () => modal.style.display = 'none');
+// Close modal via X button
+if (closeButton) {
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+  });
+}
+
+// Close modal by clicking outside the content
 window.addEventListener('click', e => {
-  if (e.target === modal) modal.style.display = 'none';
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+  }
 });
+
+// Close modal on Escape key
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && modal.style.display === 'block') modal.style.display = 'none';
+  if (e.key === 'Escape' && modal.style.display === 'block') {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+  }
 });
+
 
 // =========================
 //     STARFIELD CANVAS
