@@ -53,9 +53,9 @@ html {
   text-decoration: none;
   color: #26F808;
   border: 1px solid #26F808;
-  padding: 0.2rem 0.8rem;     /* ✅ Compact vertical + tighter width */
+  padding: 0.3rem 1rem;     /* ✅ Compact vertical + tighter width */
   font-size: 0.85rem;         /* ✅ Smaller text */
-  width: auto;                /* ✅ Remove fixed width */
+  width: 120px;                /* ✅ Remove fixed width */
   border-radius: 50px;
   background-color: black;
   transition: all 0.3s ease;
