@@ -934,6 +934,10 @@ body.no-scroll {
     letter-spacing: 0.09rem;
   }
 
+  .hero-subtitle {
+  margin-top: 1.2rem; /* ✅ Push subtitle lower on mobile */
+  }
+
   .about-section {
     background: url('assets/g3.jpg') center center / cover no-repeat;
     padding-top: 3vh; 
