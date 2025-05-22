@@ -53,8 +53,8 @@ html {
   text-decoration: none;
   color: #26F808;
   border: 1px solid #26F808;
-  padding: 0.1rem 0.9rem;     /* ✅ Compact vertical + tighter width */
-  font-size: 0.85rem;         /* ✅ Smaller text */
+  padding: 0.1rem 0.6rem;     /* ✅ Compact vertical + tighter width */
+  font-size: 1rem;         /* ✅ Smaller text */
   width: 110px;                /* ✅ Remove fixed width */ 
   border-radius: 60px;
   background-color: black;
