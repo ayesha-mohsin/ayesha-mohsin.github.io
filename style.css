@@ -370,7 +370,7 @@ html {
 /* ========================= */
 .research-section {
   background: url('assets/g3.jpg') center center / cover no-repeat;
-  padding: 5vh 10vw 8vh 10vw;
+  padding: 4vh 10vw 6vh 10vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -401,7 +401,7 @@ html {
   font-family: 'Anonymous Pro', monospace;
   font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   margin-top: -0.5rem;
   text-shadow: none;
 }
@@ -410,7 +410,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
