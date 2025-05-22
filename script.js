@@ -68,32 +68,29 @@ document.querySelectorAll('.navbar a').forEach(link => {
 // =========================
 //    PROJECT MODAL
 // =========================
-const modal = document.getElementById('project-modal');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalSkills = document.getElementById('modal-skills');
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById('project-modal');
+  const closeButton = document.querySelector('.close-button');
 
-// Modal Close Button Event
-const closeButton = document.querySelector('.close-button');
-if (closeButton) {
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+
+  window.addEventListener('click', event => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
   });
-}
 
-// Close modal if user clicks outside modal content
-window.addEventListener('click', event => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+    }
+  });
 });
 
-// Close modal on Escape key
-window.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    modal.style.display = 'none';
-  }
-});
 
 // Project Data
 const projectDetails = {
