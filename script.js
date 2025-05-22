@@ -72,6 +72,7 @@ const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalSkills = document.getElementById('modal-skills');
+const closeButton = document.querySelector('.close-button');
 
 const projectDetails = {
   1: {
@@ -106,6 +107,7 @@ const projectDetails = {
   }
 };
 
+
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const projectId = card.getAttribute('data-project');
@@ -114,29 +116,18 @@ document.querySelectorAll('.project-card').forEach(card => {
     if (project && modalTitle && modalDescription && modalSkills && modal) {
       modalTitle.textContent = project.title;
       modalDescription.textContent = project.description;
-      modalSkills.innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
+      modalSkills.innerHTML = project.skills.map(skill => <span>${skill}</span>).join('');
       modal.style.display = 'block';
     }
   });
 });
 
-// === Close Modal Button Support === //
-document.querySelectorAll('.close-button').forEach(button => {
-  button.addEventListener('click', () => {
-    if (modal) modal.style.display = 'none';
-  });
+closeButton?.addEventListener('click', () => {
+  if (modal) modal.style.display = 'none';
 });
 
-// === Close Modal on Click Outside === //
 window.addEventListener('click', event => {
   if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// === Close Modal on ESC key === //
-window.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && modal.style.display === 'block') {
     modal.style.display = 'none';
   }
 });
@@ -266,5 +257,5 @@ menuToggle?.addEventListener('click', () => {
   if (!isMenuOpen) {
     window.scrollTo({ top: 0 });
   }
-});
+}); 
 
