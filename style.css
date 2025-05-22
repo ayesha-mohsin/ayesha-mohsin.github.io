@@ -323,7 +323,7 @@ html {
   color: #26F808;
   background-color: black;
   border: 1.5px solid #26F808;
-  padding: 0.15rem 0.55rem;
+  padding: 0.1rem 0.55rem;
   border-radius: 18px; /* Adjust for pill or square style */
   text-align: center;
   font-size: 12px !important;   /* <--- FORCES this size */
