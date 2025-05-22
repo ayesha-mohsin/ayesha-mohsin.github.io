@@ -116,7 +116,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     if (project && modalTitle && modalDescription && modalSkills && modal) {
       modalTitle.textContent = project.title;
       modalDescription.textContent = project.description;
-      modalSkills.innerHTML = project.skills.map(skill => <span>${skill}</span>).join('');
+      modalSkills.innerHTML = project.skills.map(skill => `<span>${skill}</span>`).join('');
       modal.style.display = 'block';
     }
   });
@@ -257,5 +257,4 @@ menuToggle?.addEventListener('click', () => {
   if (!isMenuOpen) {
     window.scrollTo({ top: 0 });
   }
-}); 
-
+});
