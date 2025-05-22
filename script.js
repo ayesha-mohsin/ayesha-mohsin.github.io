@@ -68,29 +68,30 @@ document.querySelectorAll('.navbar a').forEach(link => {
 // =========================
 //    PROJECT MODAL
 // =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById('project-modal');
-  const closeButton = document.querySelector('.close-button');
+const modal = document.getElementById('project-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalSkills = document.getElementById('modal-skills');
 
-  if (closeButton) {
-    closeButton.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
+// Modal Close Button Event
+const closeButton = document.querySelector('.close-button');
+if (closeButton) {
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+}
+
+window.addEventListener('click', event => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
   }
-
-  window.addEventListener('click', event => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-
-  window.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && modal.style.display === 'block') {
-      modal.style.display = 'none';
-    }
-  });
 });
 
+window.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    modal.style.display = 'none';
+  }
+});
 
 // Project Data
 const projectDetails = {
