@@ -1060,6 +1060,14 @@ body.no-scroll {
     transform: scale(0.95);
   }
 
+  #modal-title {
+    text-shadow:
+      0 0 1px #26F808,
+      0 0 2px #26F808;
+    font-size: 1.2rem;
+  }
+
+
   .contact-card {
     padding: 1.5rem 1rem;
   }  
