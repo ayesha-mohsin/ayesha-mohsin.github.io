@@ -80,33 +80,33 @@ const closeButton = document.querySelector('.close-button');
 const projectDetails = {
   1: {
     title: "LLM Prompt Bias Evaluator (Responsible AI)",
-    description: "Designed a bias-auditing tool...",
+    description: "Designed a bias-auditing tool to evaluate how LLMs respond to sensitive hiring and identity-based prompts. Used a RAG pipeline with LangChain, OpenAI, and FAISS to simulate realistic recruiting interactions and flag biased completions. Outputs were scored for fairness and visualized using heatmaps and demographic comparisons.",
     skills: ["LLMs", "Prompt Engineering", "LangChain", "RAG", "FAISS", "OpenAI API", "Transformers", "Python", "AI Fairness"]
   },
   2: {
-    title: "Job Description Bias Analyzer Dashboard",
-    description: "Built a dashboard to analyze exclusionary language...",
-    skills: ["Web Scraping", "Text Mining", "SQL", "Power BI", "Python", "DEI Analytics"]
+    title: "Job Description Bias Analyzer Dashboard (Responsible AI / DEI Analytics)",
+    description: "Built a dashboard to analyze exclusionary language in 1,000+ scraped job listings across industries. Used NLP to flag gender-coded terms, inflated requirements, and tone bias. Designed a Power BI dashboard with filters for industry, role level, and DEI KPIs to support inclusive hiring audits.",
+    skills: ["Web Scraping", "Text Mining", "SQL", "Tableau / Power BI", "KPI Reporting", "Python", "DEI Analytics"]
   },
   3: {
     title: "Exoplanet Detection using Kepler Data",
-    description: "Trained a deep learning model on NASA’s Kepler dataset...",
-    skills: ["Machine Learning", "TensorFlow", "Feature Engineering"]
+    description: "Trained a deep learning model on NASA’s Kepler dataset to identify potential exoplanets from light curve features. Engineered astrophysical signals like flux variation and orbital periodicity, and used SHAP to interpret model predictions.",
+    skills: ["Machine Learning", "Deep Learning", "Feature Engineering", "SHAP", "Model Evaluation", "Python", "TensorFlow"]
   },
   4: {
     title: "Climate Trends Forecasting with Berkeley Earth",
-    description: "Forecasted global temperature anomalies...",
-    skills: ["Time Series", "ARIMA", "Prophet", "Tableau", "Python"]
+    description: "Forecasted global temperature anomalies using official Berkeley Earth data. Applied ARIMA and Prophet to decades of climate records, then visualized trend projections and regional risk zones via an interactive Tableau dashboard.",
+    skills: ["Time Series Forecasting", "Statistical Modeling", "Data Visualization", "Tableau", "Python", "ETL Simulation"]
   },
   5: {
-    title: "Symptom Checker Chatbot with PubMed",
-    description: "Created a chatbot that retrieves evidence-based answers...",
-    skills: ["NLP", "RAG", "Transformers", "OpenAI API"]
+    title: "Symptom Checker Chatbot with PubMed (Healthcare NLP)",
+    description: "Created a chatbot that retrieves evidence-based medical answers using real-time PubMed abstracts. Built a RAG pipeline with HuggingFace embeddings and LangChain to match symptom queries with relevant literature and return safe, clear LLM-generated responses.",
+    skills: ["NLP", "RAG", "LangChain", "Transformers", "OpenAI API", "PubMed API", "Python", "Model Evaluation"]
   },
   6: {
-    title: "Smart Energy Recommender",
-    description: "Built a recommender system for energy-saving actions...",
-    skills: ["ML Pipelines", "Weather API", "Python"]
+    title: "Smart Energy Recommender (Sustainability)",
+    description: "Built a recommender system that suggests energy-saving actions based on personal usage logs and live weather conditions. Integrated OpenWeatherMap API into ML pipelines to generate personalized insights and visualize them through optional dashboards.",
+    skills: ["ML Pipelines", "Recommender Systems", "API Integration", "Feature Engineering", "Python", "Cloud Readiness"]
   }
 };
 
