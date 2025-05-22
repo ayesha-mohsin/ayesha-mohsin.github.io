@@ -53,8 +53,8 @@ html {
   text-decoration: none;
   color: #26F808;
   border: 1px solid #26F808;
-  padding: 0.01rem 1rem;          /* ✅ Reduce top/bottom */
-  font-size: 0.5rem;            /* ✅ Increase text */
+  padding: 0.2rem 1rem;     /* ↓ Tighter top/bottom padding */
+  font-size: 0.8rem;        /* ↓ Smaller font */
   border-radius: 50px;
   background-color: black;
   transition: all 0.3s ease;
