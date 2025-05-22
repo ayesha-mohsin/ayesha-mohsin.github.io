@@ -55,7 +55,7 @@ html {
   border: 1px solid #26F808;
   padding: 0.1rem 0.9rem;     /* ✅ Compact vertical + tighter width */
   font-size: 0.8rem;         /* ✅ Smaller text */
-  width: 120px;                /* ✅ Remove fixed width */ 
+  width: 115px;                /* ✅ Remove fixed width */ 
   border-radius: 50px;
   background-color: black;
   transition: all 0.3s ease;
