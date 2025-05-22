@@ -54,7 +54,7 @@ html {
   color: #26F808;
   border: 1px solid #26F808;
   padding: 0.5rem 1rem;     /* ↓ Tighter top/bottom padding */
-  font-size: 1rem;        /* ↓ Smaller font */
+  font-size: 4rem;        /* ↓ Smaller font */
   border-radius: 50px;
   background-color: black;
   transition: all 0.3s ease;
