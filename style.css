@@ -17,9 +17,11 @@ body {
   overflow-x: hidden;
 }
 
+/*
 html {
-  scroll-padding-top: 60px; /* adjust to match your navbar height */
+  scroll-padding-top: 60px;
 }
+*/
 
 .about-section,
 .research-section {
