@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      const offset = 160;
+      const offset = 100;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
       window.scrollTo({ top, behavior: 'smooth' });
