@@ -11,7 +11,7 @@
 }
 
 html {
-  scroll-padding-top: 60px; /* Match your navbar height or adjust as needed */
+  scroll-padding-top: 0; 
 }
 
 body {
@@ -70,6 +70,7 @@ body {
 /*        HERO LANDING PAGE  */
 /* ========================= */
 .hero {
+  padding-top: 90px; /* whatever height your navbar is */
   position: relative;
   width: 100%;
   min-height: 100vh;
