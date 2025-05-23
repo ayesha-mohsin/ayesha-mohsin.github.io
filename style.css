@@ -30,7 +30,6 @@ body {
 /*        NAVBAR SECTION     */
 /* ========================= */
 .navbar {
-  border-bottom: 2px dashed red;
   position: fixed;
   top: 0;
   right: 0;
