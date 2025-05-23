@@ -674,7 +674,7 @@ html {
 
 .contact-section {
   min-height: 100vh;
-  padding: 4vh 10vw;
+  padding: 2vh 10vw 4vh 10vw;
   text-align: center;
   background: url('assets/g3.jpg') center center / cover no-repeat;
   display: flex;
