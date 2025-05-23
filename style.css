@@ -708,9 +708,9 @@ html {
 
 .contact-card h2 {
   font-family: 'Anonymous Pro', monospace;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #26F808;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .contact-card p {
