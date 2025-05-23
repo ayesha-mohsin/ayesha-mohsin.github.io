@@ -719,7 +719,8 @@ html {
   color: #26F808;
   line-height: 1.6;
   text-align: center;
-  margin: 0.5rem auto 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   max-width: 600px;
   padding: 0 1rem;
 }
