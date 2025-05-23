@@ -47,23 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================
   //    SMOOTH SCROLL
   // =========================
-  document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 130;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
 
-      window.scrollTo({ top, behavior: 'smooth' });
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 130;
 
-      // Close mobile nav
-      const navList = document.querySelector('.nav-links ul');
-      const menuToggle = document.getElementById('menu-toggle');
-      navList?.classList.remove('show');
-      document.body.classList.remove('no-scroll');
-      menuToggle?.classList.remove('open');
-    });
+    const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+    window.scrollTo({ top, behavior: 'smooth' });
+
+    // Close mobile nav
+    const navList = document.querySelector('.nav-links ul');
+    const menuToggle = document.getElementById('menu-toggle');
+    navList?.classList.remove('show');
+    document.body.classList.remove('no-scroll');
+    menuToggle?.classList.remove('open');
   });
+});
+
 
   // =========================
   //    PROJECT MODAL
