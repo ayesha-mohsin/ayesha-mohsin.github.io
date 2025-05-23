@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 80px; /* Match your navbar height or adjust as needed */
+}
+
+
 body {
   font-family: 'Fira Code', monospace;
   background-color: black;
