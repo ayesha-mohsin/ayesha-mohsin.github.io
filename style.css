@@ -17,12 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-.about-section,
-.research-section {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
-
 /* ===== FONTS ===== */
 .navbar, .about-text p, .about-text h2 {
   font-family: 'Anonymous Pro', monospace;
