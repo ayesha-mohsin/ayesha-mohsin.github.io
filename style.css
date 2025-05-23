@@ -689,7 +689,8 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid #26F808;
   border-radius: 20px;
-  padding: 3rem 5rem;
+  .contact-card {
+  padding: 1.2rem 5rem 2rem 5rem; /* top, right, bottom, left */
   box-shadow: 0 0 20px rgba(38, 248, 8, 0.5);
   max-width: 700px;
   width: 100%;
@@ -710,7 +711,8 @@ html {
   font-family: 'Anonymous Pro', monospace;
   font-size: 2.5rem;
   color: #26F808;
-  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;  /* ✅ Add this */
+  margin-bottom: 0.3rem; /* optional tweak */
 }
 
 .contact-card p {
@@ -719,7 +721,7 @@ html {
   color: #26F808;
   line-height: 1.6;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
   margin-bottom: 1rem;
   max-width: 600px;
   padding: 0 1rem;
