@@ -47,26 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================
   //    SMOOTH SCROLL
   // =========================
-document.querySelectorAll('.navbar a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-
-    const navbar = document.querySelector('.navbar');
-    const navbarHeight = navbar ? navbar.offsetHeight : 130;
-
-    const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-
-    window.scrollTo({ top, behavior: 'smooth' });
-
-    // Close mobile nav
-    const navList = document.querySelector('.nav-links ul');
-    const menuToggle = document.getElementById('menu-toggle');
-    navList?.classList.remove('show');
-    document.body.classList.remove('no-scroll');
-    menuToggle?.classList.remove('open');
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const targetId = this.getAttribute('href');
+      const target = document.querySelector(targetId);
+  
+      // Wait for scroll position calculation after layout paints
+      requestAnimationFrame(() => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY;
+        const scrollTarget = targetTop - navbarHeight;
+  
+        window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      });
+  
+      // Close mobile nav
+      const navList = document.querySelector('.nav-links ul');
+      const menuToggle = document.getElementById('menu-toggle');
+      navList?.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+      menuToggle?.classList.remove('open');
+    });
   });
-});
 
 
   // =========================
