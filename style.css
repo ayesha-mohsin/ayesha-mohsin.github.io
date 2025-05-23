@@ -11,9 +11,8 @@
 }
 
 html {
-  scroll-padding-top: 80px; /* Match your navbar height or adjust as needed */
+  scroll-padding-top: 60px; /* Match your navbar height or adjust as needed */
 }
-
 
 body {
   font-family: 'Fira Code', monospace;
@@ -31,6 +30,7 @@ body {
 /*        NAVBAR SECTION     */
 /* ========================= */
 .navbar {
+  border-bottom: 2px dashed red;
   position: fixed;
   top: 0;
   right: 0;
