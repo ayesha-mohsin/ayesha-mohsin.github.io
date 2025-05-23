@@ -17,11 +17,14 @@ body {
   overflow-x: hidden;
 }
 
-/*
-html {
-  scroll-padding-top: 60px;
+#home,
+#about,
+#research,
+#projects,
+#contact {
+  scroll-margin-top: 80px !important;
 }
-*/
+
 
 .about-section,
 .research-section {
