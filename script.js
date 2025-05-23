@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      const offset = 100;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 130;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
       window.scrollTo({ top, behavior: 'smooth' });
 
