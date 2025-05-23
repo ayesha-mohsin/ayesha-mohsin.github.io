@@ -17,15 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-#home,
-#about,
-#research,
-#projects,
-#contact {
-  scroll-margin-top: 120px !important;
-}
-
-
 .about-section,
 .research-section {
   padding-top: 10vh;
@@ -75,16 +66,6 @@ body {
   color: black;
   box-shadow: 0 0 10px #26F808, 0 0 20px #26F808;
 }
-
-/* === Fix anchor jump with fixed navbar === */
-#home,
-#about,
-#research,
-#projects,
-#contact {
-  scroll-margin-top: 110px;
-}
-
 
 /* ========================= */
 /*        HERO LANDING PAGE  */
