@@ -70,14 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const projectDetails = {
   1: {
-    title: "LLM Prompt Bias Evaluator (Responsible AI)",
-    description: "Designed a bias-auditing tool to evaluate how LLMs respond to sensitive hiring and identity-based prompts. Used a RAG pipeline with LangChain, OpenAI, and FAISS to simulate realistic recruiting interactions and flag biased completions. Outputs were scored for fairness and visualized using heatmaps and demographic comparisons.",
-    skills: ["LLMs", "Prompt Engineering", "LangChain", "RAG", "FAISS", "OpenAI API", "Transformers", "Python", "AI Fairness"]
+    title: "ZomatoSmart – Intelligent Restaurant Recommendation Engine",
+    description: "Built a hybrid recommendation system combining collaborative filtering, matrix factorization, clustering, and deep models, boosting CTR by 18% and conversions by 12%. Scaled preprocessing for 10M+ daily interactions with Pandas, NumPy, and SQL, while deploying Dockerized FastAPI microservices on AWS to handle 2M+ concurrent requests and cut time-to-order by 25%.",
+    skills: ["Python", "PyTorch", "TensorFlow", "Pandas", "NumPy", "PostgreSQL", "XGBoost" , "KMeans", "FastAPI", "Docker", "AWS EC2"]
   },
   2: {
-    title: "Job Description Bias Analyzer Dashboard (Responsible AI / DEI Analytics)",
-    description: "Built a dashboard to analyze exclusionary language in 1,000+ scraped job listings across industries. Used NLP to flag gender-coded terms, inflated requirements, and tone bias. Designed a Power BI dashboard with filters for industry, role level, and DEI KPIs to support inclusive hiring audits.",
-    skills: ["Web Scraping", "Text Mining", "SQL", "Tableau / Power BI", "KPI Reporting", "Python", "DEI Analytics"]
+    title: "DeliveryOptima – Dynamic Delivery Time Prediction System",
+    description: "Developed real-time ETA models using ARIMA, Prophet, LSTMs, and ensemble methods, improving accuracy by 32% (MAPE 25% → 17%). Integrated GPS, weather, and traffic signals through Kafka and Redis streams, enabling sub-second inference. Deployed with Docker, Flask, and MLflow pipelines to reduce late deliveries by 40% and raise CSAT by 0.8.",
+    skills: ["Python", "ARIMA", "Prophet", "LSTM", "Random Forest", "XGBoost", "Apache Kafka", "Redis", "Flask", "Docker", "AWS", "MLflow"]
   },
   3: {
     title: "Exoplanet Detection using Kepler Data",
@@ -85,19 +85,19 @@ const projectDetails = {
     skills: ["Machine Learning", "Deep Learning", "Feature Engineering", "SHAP", "Model Evaluation", "Python", "TensorFlow"]
   },
   4: {
-    title: "Climate Trends Forecasting with Berkeley Earth",
-    description: "Forecasted global temperature anomalies using official Berkeley Earth data. Applied ARIMA and Prophet to decades of climate records, then visualized trend projections and regional risk zones via an interactive Tableau dashboard.",
-    skills: ["Time Series Forecasting", "Statistical Modeling", "Data Visualization", "Tableau", "Python", "ETL Simulation"]
+    title: "MediRAG – AI-Powered Medical Query Assistant",
+    description: "Designed a Retrieval-Augmented Generation pipeline with LangChain + FAISS, improving clinical query accuracy by 35%. Fine-tuned BioBERT/GPT on 20K+ notes, applied NER for structured symptom extraction, and integrated PubMed APIs. Delivered a Streamlit prototype with <1.2s latency, reducing clinician lookup time by 40%.",
+    skills: ["Python", "LangChain", "FAISS", "Hugging Face", "Transformers", "BioBERT", "Prompt Engineering", "NER", "Streamlit", "PubMed API"]
   },
   5: {
-    title: "Symptom Checker Chatbot with PubMed (Healthcare NLP)",
-    description: "Created a chatbot that retrieves evidence-based medical answers using real-time PubMed abstracts. Built a RAG pipeline with HuggingFace embeddings and LangChain to match symptom queries with relevant literature and return safe, clear LLM-generated responses.",
-    skills: ["NLP", "RAG", "LangChain", "Transformers", "OpenAI API", "PubMed API", "Python", "Model Evaluation"]
+    title: "FinGuard – AI-Powered Fraud & Risk Detection Platform",
+    description: "Built ensemble fraud detection models combining statistical and ML approaches, raising fraud recall to 94% while reducing false positives by 21%. Leveraged graph features to identify fraud rings and deployed SQL + Kafka pipelines for real-time monitoring at scale. Delivered dashboards to streamline audits, cutting prep time by 35%.",
+    skills: ["Python", "scikit-learn", "Logistic Regression", "Random Forest", "XGBoost", "KNN", "Graph Analytics", "SQL", "Apache Kafka", "Git", "GitHub"]
   },
   6: {
-    title: "Smart Energy Recommender (Sustainability)",
-    description: "Built a recommender system that suggests energy-saving actions based on personal usage logs and live weather conditions. Integrated OpenWeatherMap API into ML pipelines to generate personalized insights and visualize them through optional dashboards.",
-    skills: ["ML Pipelines", "Recommender Systems", "API Integration", "Feature Engineering", "Python", "Cloud Readiness"]
+    title: "ThreatLens – AI-Powered Cyber Threat Intelligence Platform",
+    description: "Processed 50M+ daily security logs with Spark ETL pipelines, cutting detection latency to <5 seconds. Trained classifiers and applied NLP for phishing detection and YOLO-based CV for malicious site analysis, achieving 96% accuracy. Deployed on AWS with Kubernetes and integrated MLOps tools to reduce MTTD by 38%.",
+    skills: ["Python", "Apache Spark", "scikit-learn", "Logistic Regression", "Decision Trees", "KNN", "NLP", "Sentiment Analysis", "YOLO", "CNN", "Docker", "Kubernetes", "DVC", "Weights & Biases"]
   }
 };
 
@@ -240,3 +240,4 @@ const projectDetails = {
     }
   });
 });
+
