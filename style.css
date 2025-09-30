@@ -291,7 +291,7 @@ body {
 
 .about-text p {
   color: #7FFF00;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   text-align: justify;
   margin-bottom: 1.2rem; /* <<< ADD THIS */
@@ -1086,5 +1086,6 @@ body.no-scroll {
     padding: 0.5rem;
   }
 }
+
 
 
