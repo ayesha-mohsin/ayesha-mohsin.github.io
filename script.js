@@ -70,14 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const projectDetails = {
   1: {
-    title: "ZomatoSmart – Intelligent Restaurant Recommendation Engine",
+    title: "ZomaSmart – Intelligent Restaurant Recommendation Engine",
     description: "Built a hybrid recommendation system combining collaborative filtering, matrix factorization, clustering, and deep models, boosting CTR by 18% and conversions by 12%. Scaled preprocessing for 10M+ daily interactions with Pandas, NumPy, and SQL, while deploying Dockerized FastAPI microservices on AWS to handle 2M+ concurrent requests and cut time-to-order by 25%.",
     skills: ["Python", "PyTorch", "TensorFlow", "Pandas", "NumPy", "PostgreSQL", "XGBoost" , "KMeans", "FastAPI", "Docker", "AWS EC2"]
   },
   2: {
-    title: "DeliveryOptima – Dynamic Delivery Time Prediction System",
-    description: "Developed real-time ETA models using ARIMA, Prophet, LSTMs, and ensemble methods, improving accuracy by 32% (MAPE 25% → 17%). Integrated GPS, weather, and traffic signals through Kafka and Redis streams, enabling sub-second inference. Deployed with Docker, Flask, and MLflow pipelines to reduce late deliveries by 40% and raise CSAT by 0.8.",
-    skills: ["Python", "ARIMA", "Prophet", "LSTM", "Random Forest", "XGBoost", "Apache Kafka", "Redis", "Flask", "Docker", "AWS", "MLflow"]
+  title: "DeliveryOptima – Dynamic Delivery Time Prediction System",
+  description: "Performed EDA on 12M+ delivery records; engineered seasonal-lag and weather-traffic features for ARIMA, Prophet, and LSTM models, improving MAPE from 25% to 17% (32% ETA accuracy gain). Applied statistical analysis (ANOVA, chi-square) and feature selection to identify late-delivery predictors. Built Power BI dashboard for stakeholder communication. Deployed ML pipeline on AWS with real-time GPS streaming via Kafka + Redis, cutting late deliveries by 40% and boosting driver efficiency by 15%.",
+  skills: ["Python", "EDA", "ARIMA", "Prophet", "LSTM", "Statistical Analysis", "Feature Engineering", "Power BI", "Apache Kafka", "Redis", "Flask", "Docker", "AWS", "MLflow"]
   },
   3: {
     title: "Exoplanet Detection using Kepler Data",
@@ -90,9 +90,9 @@ const projectDetails = {
     skills: ["Python", "LangChain", "FAISS", "Hugging Face", "Transformers", "BioBERT", "Prompt Engineering", "NER", "Streamlit", "PubMed API"]
   },
   5: {
-    title: "FinGuard – AI-Powered Fraud & Risk Detection Platform",
-    description: "Built ensemble fraud detection models combining statistical and ML approaches, raising fraud recall to 94% while reducing false positives by 21%. Leveraged graph features to identify fraud rings and deployed SQL + Kafka pipelines for real-time monitoring at scale. Delivered dashboards to streamline audits, cutting prep time by 35%.",
-    skills: ["Python", "scikit-learn", "Logistic Regression", "Random Forest", "XGBoost", "KNN", "Graph Analytics", "SQL", "Apache Kafka", "Git", "GitHub"]
+  title: "FinGuard – AI-Powered Fraud & Risk Detection Platform",
+  description: "Conducted EDA on 2M+ financial transactions; applied hypothesis testing (t-tests, correlation) and statistical feature selection to detect high-risk merchant/device/IP patterns. Developed ensemble fraud detection models (Logistic Regression, KNN, Random Forest, XGBoost) achieving 94% fraud recall and 21% reduction in false positives. Delivered Power BI risk-score KPI dashboard for AML/KYC reporting, cutting audit prep time by 35%. Deployed real-time ETL pipeline with SQL + Kafka + Snowflake for sub-150ms scoring of 2M+ daily transactions.",
+  skills: ["Python", "EDA", "Statistical Analysis", "Hypothesis Testing", "scikit-learn", "Logistic Regression", "KNN", "Random Forest", "XGBoost", "Power BI", "SQL", "Apache Kafka", "Snowflake", "ETL"]
   },
   6: {
     title: "ThreatLens – AI-Powered Cyber Threat Intelligence Platform",
@@ -240,4 +240,5 @@ const projectDetails = {
     }
   });
 });
+
 
